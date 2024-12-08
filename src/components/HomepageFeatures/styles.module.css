@@ -1,0 +1,29 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+  transition: transform 0.5s ease, background-color 0.8s ease;
+}
+
+[data-theme='dark'] .features {
+  background-color: #1e1f1f;
+}
+
+/* Optional transition for smoother switching in both modes */
+[data-theme='light'] .features {
+  background-color: #f5f4f4;
+}
+.featureSvg:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+.features .h3:hover {
+  transform: scale(1.05);
+}

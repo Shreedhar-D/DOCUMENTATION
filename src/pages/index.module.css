@@ -1,0 +1,59 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover; /* Ensure the image fully covers the section */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    width: 100%; /* Ensure full width */
+
+    /* Responsive height based on aspect ratio (height/width = 800/2530) */
+    height: auto; /* Remove fixed height */
+    background-image: url('../../static/img/hero_image_light.png'); /* Default: Light mode image */
+    transition: background-image 0.3s ease-in-out;
+    padding-top: 20%;
+}
+
+@media screen and (max-width: 996px) {
+    .heroBanner {
+        padding: 2rem;
+    }
+}
+
+
+/*.buttons {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+@media (prefers-color-scheme: dark) {
+    .heroBanner {
+        background-image: url('../../static/img/hero_image_dark.png'); /* Dark mode image */
+    }
+}
+
+/* Optional Dark Mode Specific Styling */
+[data-theme='dark'] .heroBanner {
+    background-image: url('/static/img/hero_image_dark.png'); /* Dark mode image */
+    color: rgb(245, 245, 247);
+}
+
+/* Optional transition for smoother switching in both modes */
+[data-theme='light'] .heroBanner {
+    background-image: url('/static/img/hero_image_light.png'); /* Light mode image */
+    color: rgb(29, 29, 31);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
